@@ -1,11 +1,32 @@
+import "./Navbar.css"
+
+import { Link } from "react-router-dom"
+
 const Navbar = ()=>{
 
     return (
-        <ul style={{listStyle: "none", display: "flex", justifyContent: "flex-start", fontSize: "20px"}}>
-            <li><a href="" style={{textDecoration:"none", paddingRight: "10px", color:"white"}}>Novelas</a></li>
-            <li><a href="" style={{textDecoration:"none", paddingRight: "10px", color:"white"}}>Cuentos</a></li>
-            <li><a href="" style={{textDecoration:"none", paddingRight: "10px", color:"white"}}>Academicos</a></li>
-            <li><a href="" style={{textDecoration:"none", color:"white"}}>Infantiles</a></li>
+        <ul>
+
+            <Link to="/">
+                <li>Todos</li>
+            </Link>
+
+            <Link to="/category/novelas">
+                <li>Novelas</li>
+            </Link>
+
+            <Link to="/category/cuentos">
+                <li>Cuentos</li>
+            </Link>
+            
+            <Link to="/category/academicos">
+                <li>Academicos</li>
+            </Link>
+
+            <Link to="/category/infantiles">
+                <li>Infantiles</li>
+            </Link>
+
         </ul>
     )
 

@@ -1,20 +1,19 @@
 import Navbar from "../navbar/Navbar"
 import CartWidget from "../CartWidget/CartWidget"
+import "./Header.css"
+
+import { Link } from "react-router-dom"
 
 const Header = ()=>{
     
     return (
-        <div style={
-            {display: "flex",
-            width: "100%",
-            height:"20vh",
-            justifyContent: "space-around",
-            alignItems: "center",
-            backgroundColor: "purple"}
-        }>
+        <div className="cabecera">
+            
             <div>
-                <h1 style={{margin: "0", fontSize: "55px"}}>The</h1>
-                <h2 style={{margin: "0", color: "white"}}>Book Shop</h2>
+                <Link to="/" style={{ textDecoration: 'none'}}>
+                    <h1>The</h1>
+                    <h2 className="subtitulo">Book Shop</h2>
+                </Link>
             </div>
             <Navbar />
             <CartWidget />

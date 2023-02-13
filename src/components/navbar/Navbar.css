@@ -1,0 +1,13 @@
+ul{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 20px;
+}
+
+li{
+    list-style: none;
+    padding-right: 10px;
+    color: white;
+    font-weight: bold;
+}

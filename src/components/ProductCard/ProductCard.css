@@ -1,0 +1,30 @@
+.tarjeta{
+    background-position: center center;
+    background-size: cover;
+    margin: 20px;
+}
+
+.producto:hover {
+    background-color: blueviolet;
+    color: black;
+    opacity: 92%;
+}
+
+.producto{
+    font-family: 'Bebas Neue';
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 400px;
+    padding-left: 20px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0);
+    opacity: 0%;
+    transition: color 0.8s, background-color 0.8s, opacity 0.8s;
+}
+
+.boton-detalles{
+    position: relative;
+    top: 150px;
+}
