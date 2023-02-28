@@ -1,32 +1,54 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { productos } from "../../productsMock";
+import { db } from "../../firebaseConfig";
 import ItemList from "../ItemList/ItemList";
+import { getDocs, collection, query, where } from "firebase/firestore";
 
-const ItemListContainer = ()=> {
+const ItemListContainer = () => {
+  const { categoryName } = useParams();
 
-    const { categoryName } = useParams();
+  const [items, setItems] = useState([]);
 
-    const [items, setItems] = useState([])
+  useEffect(() => {
+    const itemCollection = collection(db, "productos");
 
-    useEffect(()=>{
-        const productosFiltrados = productos.filter( (producto) => producto.categoria === categoryName)
-
-        const task = new Promise((resolve, reject) => {
-            resolve( categoryName ? productosFiltrados : productos);
+    if (categoryName) {
+      const q = query(itemCollection, where("categoria", "==", categoryName));
+      getDocs(q)
+        .then((res) => {
+          const productos = res.docs.map((producto) => {
+            return {
+              ...producto.data(),
+              id: producto.id,
+            };
+          });
+          setItems(productos);
+        })
+        .catch((error) => {
+          console.log(error);
         });
+    } else {
+      getDocs(itemCollection)
+        .then((res) => {
+          const productos = res.docs.map((producto) => {
+            return {
+              ...producto.data(),
+              id: producto.id,
+            };
+          });
+          setItems(productos);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
+  }, [categoryName]);
 
-        task
-            .then((res) => {setItems(res)})
-            .catch((error) => console.log("Rechazado: ", error))
-    }, [categoryName])
+  return (
+    <div>
+      <ItemList items={items} />
+    </div>
+  );
+};
 
-    return (
-        <div>
-            <ItemList items={items}/>
-        </div>
-    )
-
-}
-
-export default ItemListContainer
+export default ItemListContainer;

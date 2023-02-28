@@ -1,33 +1,30 @@
-import React, { useState, useEffect } from 'react'
-import { useParams } from 'react-router-dom'
-import { productos } from "../../productsMock"
-import "./ItemDetailContainer.css"
-
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { db } from "../../firebaseConfig";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import { getDoc, collection, doc } from "firebase/firestore";
 
 const ItemDetailContainer = () => {
-
   const { id } = useParams();
 
-  const [producto, setProducto] = useState({})
+  const [producto, setProducto] = useState({});
 
   useEffect(() => {
-    
-    let productoSeleccionado = productos.find( prod => prod.id === Number(id))
-    
-    setProducto(productoSeleccionado)
+    const itemCollection = collection(db, "productos");
+    const ref = doc(itemCollection, id);
+    getDoc(ref)
+      .then((res) => {
+        setProducto({
+          ...res.data(),
+          id: res.id,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [id]);
 
-  },[])
+  return <ItemDetail producto={producto} />;
+};
 
-  return (
-    <div className='detalle'>
-      <img className='imagen' src={producto.img} alt="" />
-      <div className='info'>
-        <h1 className='nombre'>{producto.nombre}</h1>
-        <h2 className='stock'>Stock disponible: {producto.stock}</h2>
-        <h2>Precio: ${producto.precio}</h2>
-      </div>
-    </div>
-  )
-}
-
-export default ItemDetailContainer
+export default ItemDetailContainer;
