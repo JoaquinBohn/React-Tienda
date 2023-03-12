@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { db } from "../../firebaseConfig";
 import ItemList from "../ItemList/ItemList";
 import { getDocs, collection, query, where } from "firebase/firestore";
+import "./ItemListContainer.css";
+import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
 
 const ItemListContainer = () => {
   const { categoryName } = useParams();
@@ -44,8 +46,12 @@ const ItemListContainer = () => {
     }
   }, [categoryName]);
 
+  if (items.length < 1) {
+    return <LoadingSpinner />;
+  }
+
   return (
-    <div>
+    <div className="item-list">
       <ItemList items={items} />
     </div>
   );

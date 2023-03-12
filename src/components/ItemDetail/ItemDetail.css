@@ -1,25 +1,27 @@
-.detalle{
-    width: 950px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 50px;
+.detalle {
+  width: 950px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 50px;
+  background-color: rgb(221, 221, 221);
+  border: 1px solid blueviolet;
 }
 
-.imagen{
-    width: 300px;
-    height: 450px;
+.imagen {
+  width: 300px;
+  height: 450px;
 }
 
-.info{
-    width: 600px;
-    padding-left: 10px;
+.info {
+  width: 600px;
+  padding-left: 10px;
 }
 
-.nombre{
-    padding-bottom: 50px;
+.nombre {
+  padding-bottom: 10px;
 }
 
-.stock{
-    padding-bottom: 20px;
+.stock {
+  padding-bottom: 20px;
 }
