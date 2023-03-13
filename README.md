@@ -11,7 +11,8 @@ Forma parte de mi entrega final para un curso de CoderHouse y por lo tanto gran 
 
 # Configurar variables de entorno
 
-##NPM
+## NPM
+
 ![](https://res.cloudinary.com/drdgu83bp/image/upload/v1678719003/Assets/npm_logo_k9cjrx.png)
 npm (Node Package Manager) es, como su propio nombre indica, el gestor de paquetes, módulos o librerías que nos proporciona Nodejs. Se trata de una herramienta que nos facilita el trabajo con librerías permitiéndonos instalar, actualizar y eliminar librerías de forma relativamente sencilla y automatizar la gestión de dependencias.
 
@@ -33,10 +34,12 @@ En caso de que no tengamos instalado npm o Nodejs, procederemos a instalar Node.
 Recomiendo seguir los pasos de instalación indicados en el sitio oficial:
 [Node.js.org](https://nodejs.org/en/download/package-manager/#windows-1)
 
-##React
+## React
+
 (en desarrollo...)
 
-##MUI
+## MUI
+
 ![](https://res.cloudinary.com/drdgu83bp/image/upload/v1678723866/Assets/logo_l0pxt8.png)
 Instalar la librería corriendo el siguiente código en la consola:
 
@@ -50,7 +53,8 @@ Y la fuente Roboto utilizada por MUI:
 npm install @fontsource/roboto
 ```
 
-##SweetAlert
+## SweetAlert
+
 ![](https://res.cloudinary.com/drdgu83bp/image/upload/v1678724039/Assets/images_f3psy8.png)
 Instalar la librería corriendo el siguiente código en la consola:
 
@@ -58,7 +62,8 @@ Instalar la librería corriendo el siguiente código en la consola:
 npm install sweetalert --save
 ```
 
-##React spinners
+## React spinners
+
 ![](https://res.cloudinary.com/drdgu83bp/image/upload/v1678724328/Assets/x5e5gb6l14oveaodidvn_orbtcr.png)
 Instalar librería:
 
@@ -66,7 +71,8 @@ Instalar librería:
 npm install --save react-spinners
 ```
 
-#Correr proyecto
+# Correr proyecto
+
 Una vez instalados todos los componentes necesarios, siga estos sencillos pasos:
 
 - Utilizar el comando cd en la consola para ubicarte la nueva carpeta donde ubicaremos el proyecto.
@@ -88,7 +94,8 @@ npm install
 npm start
 ```
 
-#Acerca de The Book Shop
+# Acerca de The Book Shop
+
 Hasta la fecha del 13/3/2023 el sitio cuenta con las siguiente funcionalidades:
 
 - Catálogo y filtrado de productos: podes ver todos los libros en venta con información básica o elegir una de las cuatro categorías - novelas, cuentos, académicos, e infantiles - para ver una lista filtrada de productos.
