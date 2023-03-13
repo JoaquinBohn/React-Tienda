@@ -1,5 +1,7 @@
 # Tienda online de libros
 
+Tienda desplegada: [ir al sitio](https://react-tienda-tau.vercel.app/)
+
 Este es un proyeto de ecommerce desarrollado con la finalidad de aprender las bases fundamentales de react.
 Forma parte de mi entrega final para un curso de CoderHouse y por lo tanto gran parte del mismo fue desarrollado durante dicho curso. A pesar de ello sigo trabajando en este proyecto agregando nuevas funcionalidades para hacerlo más completo a la vez que incorporo conocimiemto sobre react y demás librerías.
 
