@@ -4,11 +4,6 @@ import "./ItemDetail.css";
 import { CartContext } from "../../context/CartContext";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 
 const ItemDetail = ({ producto }) => {
   const { addToCart, getQuantityById } = useContext(CartContext);

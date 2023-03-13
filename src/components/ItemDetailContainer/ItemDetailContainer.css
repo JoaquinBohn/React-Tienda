@@ -1,0 +1,12 @@
+.item-detail {
+  height: 450px;
+  padding: 50px;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.5),
+      rgba(137, 43, 226, 0.5)
+    ),
+    url("https://res.cloudinary.com/drdgu83bp/image/upload/v1678729755/Assets/libro_k6mxom.jpg");
+  background-size: cover;
+  background-position: center center;
+}

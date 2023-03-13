@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { db } from "../../firebaseConfig";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { getDoc, collection, doc } from "firebase/firestore";
+import "./ItemDetailContainer.css";
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
@@ -24,7 +25,11 @@ const ItemDetailContainer = () => {
       });
   }, [id]);
 
-  return <ItemDetail producto={producto} />;
+  return (
+    <div className="item-detail">
+      <ItemDetail producto={producto} />
+    </div>
+  );
 };
 
 export default ItemDetailContainer;

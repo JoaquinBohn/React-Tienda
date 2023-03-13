@@ -10,17 +10,19 @@ const FinishBuy = ({ orderId }) => {
     navigate("/");
   };
   return (
-    <div className="finish">
-      <h2>El id de tu compra es: {orderId}</h2>
-      <Button
-        variant="outlined"
-        color="primary"
-        size="small"
-        style={{ height: "20px", marginLeft: "5px" }}
-        onClick={volver}
-      >
-        Volver a inicio
-      </Button>
+    <div className="finish-container">
+      <div className="finish">
+        <h2>El id de tu compra es: {orderId}</h2>
+        <Button
+          variant="outlined"
+          color="primary"
+          size="small"
+          style={{ height: "20px", marginLeft: "10px" }}
+          onClick={volver}
+        >
+          Volver a inicio
+        </Button>
+      </div>
     </div>
   );
 };

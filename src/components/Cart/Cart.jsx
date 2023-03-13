@@ -40,7 +40,7 @@ const Cart = () => {
   }
 
   return (
-    <div>
+    <div className="cart">
       <div className="title">
         <h1>Carrito</h1>
       </div>
@@ -49,7 +49,7 @@ const Cart = () => {
           {cart.length < 1 ? (
             <img
               className="no-items-img"
-              src="https://res.cloudinary.com/drdgu83bp/image/upload/v1678289209/Assets/no-items_kx4tea.png"
+              src="https://res.cloudinary.com/drdgu83bp/image/upload/v1678728872/Assets/no-items-removebg-preview_x2fyms.png"
               alt=""
             />
           ) : (
@@ -88,7 +88,7 @@ const Cart = () => {
               <h3>Cantidad de productos: {totalItems}</h3>
               <h3>Precio total: ${totalPrice}</h3>
               <Button
-                variant="outlined"
+                variant="contained"
                 color="warning"
                 size="small"
                 onClick={clearCartAlert}

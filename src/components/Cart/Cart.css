@@ -1,3 +1,14 @@
+.cart {
+  background-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.5),
+      rgba(137, 43, 226, 0.5)
+    ),
+    url("https://res.cloudinary.com/drdgu83bp/image/upload/v1678728446/Assets/shopping_i25vtv.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
 .carrito {
   display: flex;
   flex-direction: row;

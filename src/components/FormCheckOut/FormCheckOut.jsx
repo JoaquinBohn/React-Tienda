@@ -45,7 +45,7 @@ const FormCheckOut = ({ cart, total, clearCart, setOrderId, setBuy }) => {
     clearCart();
   };
   return (
-    <div>
+    <div style={{ margin: "20px", height: "100vh" }}>
       <form onSubmit={handleSubmit}>
         <input
           type="text"
