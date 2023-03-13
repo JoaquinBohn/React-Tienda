@@ -1,18 +1,99 @@
-# Este es un ecommerce
+# Tienda online de libros
+
+Este es un proyeto de ecommerce desarrollado con la finalidad de aprender las bases fundamentales de react.
+Forma parte de mi entrega final para un curso de CoderHouse y por lo tanto gran parte del mismo fue desarrollado durante dicho curso. A pesar de ello sigo trabajando en este proyecto agregando nuevas funcionalidades para hacerlo más completo a la vez que incorporo conocimiemto sobre react y demás librerías.
+
+**Tabla de Contenidos**
+
+[TOCM]
+
+[TOC]
+
+# Configurar variables de entorno
+
+##NPM
+![](https://res.cloudinary.com/drdgu83bp/image/upload/v1678719003/Assets/npm_logo_k9cjrx.png)
+npm (Node Package Manager) es, como su propio nombre indica, el gestor de paquetes, módulos o librerías que nos proporciona Nodejs. Se trata de una herramienta que nos facilita el trabajo con librerías permitiéndonos instalar, actualizar y eliminar librerías de forma relativamente sencilla y automatizar la gestión de dependencias.
+
+Para comenzar a trabajar con npm utilizaremos npm cli, el módulo que gestiona la consola de npm y desde la que correremos los comandos que necesitemos. Este módulo viene incorporado con Nodejs, por lo que al instalar Nodejs adquiriremos también NPM.
+
+Para comprobar si tenemos instalado Nodejs podemos escribir en nuestra consola el siguiente comando:
+
+```
+node -v
+```
+
+Para comprobar si ya tenemos npm instalado correremos un comando similar:
+
+```
+npm -v
+```
+
+En caso de que no tengamos instalado npm o Nodejs, procederemos a instalar Node.js para obtener ambos.
+Recomiendo seguir los pasos de instalación indicados en el sitio oficial:
+[Node.js.org](https://nodejs.org/en/download/package-manager/#windows-1)
+
+##React
+(en desarrollo...)
+
+##MUI
+![](https://res.cloudinary.com/drdgu83bp/image/upload/v1678723866/Assets/logo_l0pxt8.png)
+Instalar la librería corriendo el siguiente código en la consola:
+
+```
+npm install @mui/material @emotion/react @emotion/styled
+```
+
+Y la fuente Roboto utilizada por MUI:
+
+```
+npm install @fontsource/roboto
+```
+
+##SweetAlert
+![](https://res.cloudinary.com/drdgu83bp/image/upload/v1678724039/Assets/images_f3psy8.png)
+Instalar la librería corriendo el siguiente código en la consola:
+
+```
+npm install sweetalert --save
+```
+
+##React spinners
+![](https://res.cloudinary.com/drdgu83bp/image/upload/v1678724328/Assets/x5e5gb6l14oveaodidvn_orbtcr.png)
+Instalar librería:
+
+```
+npm install --save react-spinners
+```
+
+#Correr proyecto
+Una vez instalados todos los componentes necesarios, siga estos sencillos pasos:
+
+- Utilizar el comando cd en la consola para ubicarte la nueva carpeta donde ubicaremos el proyecto.
+- Clonar repositorio escribiendo en la consola el siguiente script:
 
 ```
 git clone https://github.com/JoaquinBohn/React-Tienda.git
 ```
 
-### Configurar variables de entorno
+- Escribir el siguiente código para instalar todas las dependencias:
 
-- REACT APP
-
-[Ir a Google](https://www.google.com/)
-
-```javascript
-const comision = 45090;
-const saludar = () => {
-  return "Bienvenido";
-};
 ```
+npm install
+```
+
+- Finalmente correr el proyecto escribiendo:
+
+```
+npm start
+```
+
+#Acerca de The Book Shop
+Hasta la fecha del 13/3/2023 el sitio cuenta con las siguiente funcionalidades:
+
+- Catálogo y filtrado de productos: podes ver todos los libros en venta con información básica o elegir una de las cuatro categorías - novelas, cuentos, académicos, e infantiles - para ver una lista filtrada de productos.
+- Detalles del producto: cada producto cuenta con un botón que permite ver la información detallada del libro junto con la opción de agregarlo al carrito.
+
+- Carrito: se visualizan todos los productos previamente agregados junto con detalles como la cantidad y el precio, y la opción de quitar el producto del carrito. También cuenta con botones para vaciarlo y para continuar con la compra. Por el momento no cuenta con persistencia de datos, por lo que al actualizar la página se eliminan los productos agregados al carrito.
+
+- CheckOut: una vez se continúa con la compra de los productos agregados al carrito el sitio te dirige a un pequeño formulario donde deberás indicar tu email y número de telefono. Al continuar se finaliza la compra y muestra el id de la orden de compra.
