@@ -36,46 +36,9 @@ En caso de que no tengamos instalado npm o Nodejs, procederemos a instalar Node.
 Recomiendo seguir los pasos de instalación indicados en el sitio oficial:
 [Node.js.org](https://nodejs.org/en/download/package-manager/#windows-1)
 
-## React
-
-(en desarrollo...)
-
-## MUI
-
-![](https://res.cloudinary.com/drdgu83bp/image/upload/v1678723866/Assets/logo_l0pxt8.png)
-Instalar la librería corriendo el siguiente código en la consola:
-
-```
-npm install @mui/material @emotion/react @emotion/styled
-```
-
-Y la fuente Roboto utilizada por MUI:
-
-```
-npm install @fontsource/roboto
-```
-
-## SweetAlert
-
-![](https://res.cloudinary.com/drdgu83bp/image/upload/v1678724039/Assets/images_f3psy8.png)
-Instalar la librería corriendo el siguiente código en la consola:
-
-```
-npm install sweetalert --save
-```
-
-## React spinners
-
-![](https://res.cloudinary.com/drdgu83bp/image/upload/v1678724328/Assets/x5e5gb6l14oveaodidvn_orbtcr.png)
-Instalar librería:
-
-```
-npm install --save react-spinners
-```
-
 # Correr proyecto
 
-Una vez instalados todos los componentes necesarios, siga estos sencillos pasos:
+Una vez instalado npm, siga estos sencillos pasos:
 
 - Utilizar el comando cd en la consola para ubicarte la nueva carpeta donde ubicaremos el proyecto.
 - Clonar repositorio escribiendo en la consola el siguiente script:
