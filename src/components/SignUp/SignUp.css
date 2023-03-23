@@ -1,0 +1,33 @@
+.registro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(221, 221, 221);
+  width: 300px;
+  height: 350px;
+  margin-top: 20px;
+}
+
+.formulario {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.registro-container {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  height: 100vh;
+  background-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.5),
+      rgba(137, 43, 226, 0.5)
+    ),
+    url("https://res.cloudinary.com/drdgu83bp/image/upload/v1679613802/Assets/desk_tfny07.jpg");
+  background-size: cover;
+  background-position: center center;
+}

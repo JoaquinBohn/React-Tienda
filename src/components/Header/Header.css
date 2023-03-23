@@ -23,3 +23,9 @@
   color: white;
   font-size: 40px;
 }
+
+.botones {
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+}
