@@ -1,7 +1,7 @@
 .item-list {
   display: flex;
-  justify-content: center;
-  padding: 40px;
+  justify-content: flex-start;
+  align-items: flex-start;
   background-image: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0.5),

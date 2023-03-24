@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { db } from "../../firebaseConfig";
 import ItemList from "../ItemList/ItemList";
+import SideBar from "../SideBar/SideBar";
 import { getDocs, collection, query, where } from "firebase/firestore";
 import "./ItemListContainer.css";
 import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
@@ -14,8 +15,16 @@ const ItemListContainer = () => {
   useEffect(() => {
     const itemCollection = collection(db, "productos");
 
+    const categorias = ["novelas", "cuentos", "academicos", "infantiles"];
+
     if (categoryName) {
-      const q = query(itemCollection, where("categoria", "==", categoryName));
+      console.log(categoryName);
+
+      const q = categorias.some((element) => element === categoryName)
+        ? query(itemCollection, where("categoria", "==", categoryName))
+        : query(itemCollection, where("id-autor", "==", categoryName));
+
+      console.log(q);
       getDocs(q)
         .then((res) => {
           const productos = res.docs.map((producto) => {
@@ -52,6 +61,7 @@ const ItemListContainer = () => {
 
   return (
     <div className="item-list">
+      <SideBar />
       <ItemList items={items} />
     </div>
   );

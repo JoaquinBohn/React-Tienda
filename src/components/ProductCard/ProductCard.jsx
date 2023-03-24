@@ -18,11 +18,11 @@ const ProductCard = ({ element }) => {
   };
 
   return (
-    <Grid item xs={4}>
+    <Grid item xs={3}>
       <Item
         sx={{
           border: "1px solid blueviolet",
-          width: "300px",
+          width: "170px",
           backgroundColor: "rgb(221, 221, 221)",
         }}
       >
@@ -31,16 +31,17 @@ const ProductCard = ({ element }) => {
           direction="column"
           justifyContent="flex-start"
           spacing={2}
-          sx={{ height: "670px", width: "100%", marginBottom: "20px" }}
+          sx={{ height: "370px", width: "100%", marginBottom: "2px" }}
         >
-          <Grid item xs={8}>
+          <Grid item xs={7}>
             <img className="img-producto" src={element.img} alt="" />
           </Grid>
-          <Grid item xs={4}>
-            <h2>Título: {element.nombre}</h2>
-            <h3>Autor: </h3>
-            <p>Precio: ${element.precio}</p>
+          <Grid item xs={5}>
+            <h2 className="libro-titulo">Título: {element.nombre}</h2>
+            <h3 className="libro-detalles">Autor: {element.autor}</h3>
+            <p className="libro-detalles">Precio: ${element.precio}</p>
             <Button
+              sx={{ width: "70px", height: "20px", fontSize: "10px" }}
               variant="contained"
               color="primary"
               size="small"

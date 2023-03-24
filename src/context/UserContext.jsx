@@ -78,6 +78,10 @@ const UserContextProvider = ({ children }) => {
     });
   };
 
+  const salir = () => {
+    setLoggedIn(false);
+  };
+
   let data = {
     user: user,
     usersList: usersList,
@@ -86,6 +90,7 @@ const UserContextProvider = ({ children }) => {
     registrarNuevoUsuario,
     finalizarRegistro,
     userExist,
+    salir,
   };
 
   return <UserContext.Provider value={data}>{children}</UserContext.Provider>;

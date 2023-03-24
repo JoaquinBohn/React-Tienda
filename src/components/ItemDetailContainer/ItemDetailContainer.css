@@ -1,6 +1,9 @@
 .item-detail {
   height: 450px;
   padding: 50px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 100px;
   background-image: linear-gradient(
       to right,
       rgba(255, 255, 255, 0.5),

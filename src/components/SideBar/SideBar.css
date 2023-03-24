@@ -1,0 +1,21 @@
+.sidebar {
+  width: 300px;
+  height: 900px;
+  background-color: rgba(221, 221, 221, 0.767);
+  margin-right: 30px;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.categorias {
+  list-style: none;
+}
+
+.titulo-catalogo {
+  font-size: 30px;
+  color: blueviolet;
+}
+
+li {
+  padding-bottom: 5px;
+}

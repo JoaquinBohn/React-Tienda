@@ -1,4 +1,3 @@
-import Navbar from "../navbar/Navbar";
 import CartWidget from "../CartWidget/CartWidget";
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
@@ -10,10 +9,14 @@ import { Button } from "@mui/material";
 const Header = () => {
   const navigate = useNavigate();
 
-  const { loggedIn } = useContext(UserContext);
+  const { loggedIn, salir } = useContext(UserContext);
 
   const login = () => {
     navigate("/login");
+  };
+
+  const logout = () => {
+    salir();
   };
 
   const registro = () => {
@@ -28,9 +31,25 @@ const Header = () => {
           <h2 className="subtitulo">Book Shop</h2>
         </Link>
       </div>
-      <Navbar />
       {loggedIn ? (
-        <CartWidget />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+          }}
+        >
+          <CartWidget />
+          <Button
+            style={{ height: "25px", marginLeft: "15px" }}
+            onClick={logout}
+            variant="contained"
+            color="neutral"
+            size="small"
+          >
+            Cerrar sesión
+          </Button>
+        </div>
       ) : (
         <div className="botones">
           <Button
