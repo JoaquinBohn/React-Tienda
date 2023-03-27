@@ -1,7 +1,5 @@
 import React from "react";
 import { createContext, useState } from "react";
-import { db } from "../firebaseConfig";
-import { getDocs, collection } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -14,25 +12,11 @@ const UserContextProvider = ({ children }) => {
 
   const navigate = useNavigate();
 
-  const usersCollection = collection(db, "users");
-
-  const obtenerUsuarios = () => {
-    getDocs(usersCollection)
-      .then((res) => {
-        const usuarios = res.docs.map((user) => {
-          return {
-            ...user.data(),
-          };
-        });
-        setUsersList(usuarios);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  const cargarUsuarios = (usuarios) => {
+    setUsersList(usuarios);
   };
 
   const validarCredenciales = (credenciales) => {
-    obtenerUsuarios();
     const usuario = usersList.find(
       (element) => element.email === credenciales.email
     );
@@ -41,7 +25,7 @@ const UserContextProvider = ({ children }) => {
       if (usuario.password === credenciales.password) {
         setUser(usuario);
         setLoggedIn(true);
-        navigate("/");
+        navigate(-1);
       } else {
         alert("Constraseña incorrecta");
       }
@@ -80,6 +64,7 @@ const UserContextProvider = ({ children }) => {
 
   const salir = () => {
     setLoggedIn(false);
+    navigate("/");
   };
 
   let data = {
@@ -91,6 +76,7 @@ const UserContextProvider = ({ children }) => {
     finalizarRegistro,
     userExist,
     salir,
+    cargarUsuarios,
   };
 
   return <UserContext.Provider value={data}>{children}</UserContext.Provider>;

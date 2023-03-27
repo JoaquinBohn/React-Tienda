@@ -1,15 +1,32 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { UserContext } from "../../context/UserContext";
+import { db } from "../../firebaseConfig";
+import { getDocs, collection } from "firebase/firestore";
 import "./Login.css";
 
 const LogIn = () => {
-  const { validarCredenciales } = useContext(UserContext);
+  const { validarCredenciales, cargarUsuarios } = useContext(UserContext);
 
   const [userInfo, setUserInfo] = useState({ email: "", password: "" });
 
+  useEffect(() => {
+    const usersCollection = collection(db, "users");
+    getDocs(usersCollection)
+      .then((res) => {
+        const usuarios = res.docs.map((user) => {
+          return {
+            ...user.data(),
+          };
+        });
+        cargarUsuarios(usuarios);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  });
+
   const handleSubmit = (e) => {
     e.preventDefault();
-
     validarCredenciales(userInfo);
   };
 

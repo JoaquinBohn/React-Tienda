@@ -1,6 +1,7 @@
 import Header from "./components/Header/Header";
 import ItemListContainer from "./components/ItemListContainer/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import Home from "./components/Home/Home";
 import CartContextProvider from "./context/CartContext";
 import UserContextProvider from "./context/UserContext";
 import Cart from "./components/Cart/Cart";
@@ -19,7 +20,7 @@ function App() {
             <Header />
 
             <Routes>
-              <Route path="/" element={<ItemListContainer />} />
+              <Route path="/" element={<Home />} />
 
               <Route
                 path="/category/:categoryName"

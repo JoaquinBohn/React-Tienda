@@ -4,23 +4,29 @@ import "./ItemDetail.css";
 import { CartContext } from "../../context/CartContext";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import { UserContext } from "../../context/UserContext";
 
 const ItemDetail = ({ producto }) => {
   const { addToCart, getQuantityById } = useContext(CartContext);
+  const { loggedIn } = useContext(UserContext);
 
   const navigate = useNavigate();
 
   const onAdd = (cantidad) => {
-    const obj = {
-      ...producto,
-      quantity: cantidad,
-    };
+    if (loggedIn) {
+      const obj = {
+        ...producto,
+        quantity: cantidad,
+      };
 
-    addToCart(obj);
+      addToCart(obj);
 
-    Swal.fire("Producto agregado al carrito.");
+      Swal.fire("Producto agregado al carrito.");
 
-    navigate("/Cart");
+      navigate("/Cart");
+    } else {
+      navigate("/login");
+    }
   };
 
   const quantity = getQuantityById(producto.id);

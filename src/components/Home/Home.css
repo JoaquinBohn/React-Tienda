@@ -1,0 +1,23 @@
+.home {
+  display: flex;
+  justify-content: center;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.5),
+      rgba(137, 43, 226, 0.5)
+    ),
+    url("https://res.cloudinary.com/drdgu83bp/image/upload/v1678727441/Assets/fondo2_b3k9lx.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.home-body {
+  margin: 50px;
+  width: 1200px;
+  height: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}

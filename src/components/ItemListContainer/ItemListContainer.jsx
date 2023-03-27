@@ -18,8 +18,6 @@ const ItemListContainer = () => {
     const categorias = ["novelas", "cuentos", "academicos", "infantiles"];
 
     if (categoryName) {
-      console.log(categoryName);
-
       const q = categorias.some((element) => element === categoryName)
         ? query(itemCollection, where("categoria", "==", categoryName))
         : query(itemCollection, where("id-autor", "==", categoryName));

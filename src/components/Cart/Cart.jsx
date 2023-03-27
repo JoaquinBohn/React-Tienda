@@ -6,10 +6,14 @@ import FormCheckOut from "../FormCheckOut/FormCheckOut";
 import FinishBuy from "../FinishBuy/FinishBuy";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
+import { UserContext } from "../../context/UserContext";
+import LogIn from "../LogIn/LogIn";
 
 const Cart = () => {
   const { cart, clearCart, deleteProductById, getTotalItems, getTotalPrice } =
     useContext(CartContext);
+
+  const { loggedIn } = useContext(UserContext);
 
   const totalPrice = getTotalPrice();
 
@@ -37,6 +41,10 @@ const Cart = () => {
 
   if (orderId) {
     return <FinishBuy orderId={orderId} />;
+  }
+
+  if (!loggedIn) {
+    return <LogIn />;
   }
 
   return (
