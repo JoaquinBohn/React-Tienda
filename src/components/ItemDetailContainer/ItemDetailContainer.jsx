@@ -14,7 +14,7 @@ const ItemDetailContainer = () => {
   const [producto, setProducto] = useState({});
 
   const volver = () => {
-    navigate("/");
+    navigate(-1);
   };
 
   useEffect(() => {

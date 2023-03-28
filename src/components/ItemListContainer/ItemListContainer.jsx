@@ -6,6 +6,7 @@ import SideBar from "../SideBar/SideBar";
 import { getDocs, collection, query, where } from "firebase/firestore";
 import "./ItemListContainer.css";
 import { LoadingSpinner } from "../LoadingSpinner/LoadingSpinner";
+import Navbar from "../Navbar/Navbar";
 
 const ItemListContainer = () => {
   const { categoryName } = useParams();
@@ -17,7 +18,7 @@ const ItemListContainer = () => {
 
     const categorias = ["novelas", "cuentos", "academicos", "infantiles"];
 
-    if (categoryName) {
+    if (categoryName !== "todos") {
       const q = categorias.some((element) => element === categoryName)
         ? query(itemCollection, where("categoria", "==", categoryName))
         : query(itemCollection, where("id-autor", "==", categoryName));
@@ -58,9 +59,12 @@ const ItemListContainer = () => {
   }
 
   return (
-    <div className="item-list">
-      <SideBar />
-      <ItemList items={items} />
+    <div className="item-list-container">
+      <Navbar />
+      <div className="item-list">
+        <SideBar />
+        <ItemList items={items} />
+      </div>
     </div>
   );
 };

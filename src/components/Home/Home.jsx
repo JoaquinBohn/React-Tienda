@@ -1,10 +1,12 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import { Paper } from "@mui/material";
-import { Link } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 import "./Home.css";
 import Novedades from "../Novedades/Novedades";
+import Banner from "../Banner/Banner";
+import Navbar from "../Navbar/Navbar";
+import Article from "../Article/Article";
 
 const Home = () => {
   const items = [
@@ -22,82 +24,55 @@ const Home = () => {
     },
   ];
 
-  function Item(props) {
-    const styles = {
-      paperContainer: {
-        backgroundImage: `url(${props.item.img})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center ",
-      },
-    };
-
-    return (
-      <Paper
-        elevation="5"
-        sx={{
-          width: "1000px",
-          height: "200px",
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          paddingLeft: "20px",
-        }}
-        style={styles.paperContainer}
-      >
-        <Link
-          to={props.item.link}
-          style={{ textDecoration: "none", color: "black" }}
-        >
-          <h2>{props.item.name}</h2>
-          <p>{props.item.description}</p>
-        </Link>
-      </Paper>
-    );
-  }
-
   return (
     <div className="home">
-      <Paper elevation="12" className="home-body" sx={{ bgcolor: "#f5f5f5c5" }}>
-        <div className="home-body">
-          <Carousel
-            sx={{
-              width: "1000px",
-              height: "250px",
-            }}
-          >
-            {items.map((item, i) => (
-              <Item key={i} item={item} />
-            ))}
-          </Carousel>
-
-          <div style={{ width: "1000px" }}>
-            <Grid
-              container
-              spacing={2}
+      <Navbar />
+      <div className="home-body">
+        <Paper
+          elevation="12"
+          className="paper-body"
+          sx={{ bgcolor: "#f5f5f5c5" }}
+        >
+          <div className="home-body">
+            <Carousel
               sx={{
-                marginTop: "20px",
-                marginBottom: "20px",
+                width: "1000px",
+                height: "250px",
               }}
             >
+              {items.map((item, i) => (
+                <Banner key={i} item={item} />
+              ))}
+            </Carousel>
+
+            <div style={{ width: "1000px" }}>
               <Grid
-                item
-                xs={8}
+                container
+                spacing={2}
                 sx={{
-                  backgroundColor: "white",
-                  height: "800px",
+                  marginTop: "20px",
+                  marginBottom: "20px",
                 }}
               >
-                <h2>Más vendidos</h2>
-                <Novedades />
+                <Grid
+                  item
+                  xs={8}
+                  sx={{
+                    height: "800px",
+                  }}
+                >
+                  <h2 className="mas-vendidos">Más vendidos</h2>
+                  <Novedades />
+                </Grid>
+                <Grid item xs={1}></Grid>
+                <Grid item xs={3}>
+                  <Article />
+                </Grid>
               </Grid>
-              <Grid item xs={1}></Grid>
-              <Grid item xs={3} sx={{ backgroundColor: "red" }}>
-                <h3>Algo</h3>
-              </Grid>
-            </Grid>
+            </div>
           </div>
-        </div>
-      </Paper>
+        </Paper>
+      </div>
     </div>
   );
 };

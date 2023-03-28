@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import { UserContext } from "../../context/UserContext";
 import LogIn from "../LogIn/LogIn";
+import Navbar from "../Navbar/Navbar";
 
 const Cart = () => {
   const { cart, clearCart, deleteProductById, getTotalItems, getTotalPrice } =
@@ -49,6 +50,7 @@ const Cart = () => {
 
   return (
     <div className="cart">
+      <Navbar />
       <div className="title">
         <h1>Carrito</h1>
       </div>

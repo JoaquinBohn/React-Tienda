@@ -27,7 +27,7 @@ const Novedades = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, [items]);
+  }, []);
 
   if (items.length < 1) {
     return <LoadingSpinner />;

@@ -34,7 +34,7 @@ const SideBar = () => {
             }}
           >
             <ul className="categorias">
-              <Link to="/" style={{ textDecoration: "none" }}>
+              <Link to="/category/todos" style={{ textDecoration: "none" }}>
                 <li>Todos</li>
               </Link>
 
@@ -86,7 +86,7 @@ const SideBar = () => {
             }}
           >
             <ul className="categorias">
-              <Link to="/" style={{ textDecoration: "none" }}>
+              <Link to="/category/todos" style={{ textDecoration: "none" }}>
                 <li>Todos</li>
               </Link>
 

@@ -2,6 +2,9 @@
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+}
+
+.item-list-container {
   background-image: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0.5),
