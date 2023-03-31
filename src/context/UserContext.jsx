@@ -16,7 +16,7 @@ const UserContextProvider = ({ children }) => {
     setUsersList(usuarios);
   };
 
-  const validarCredenciales = (credenciales) => {
+  const iniciarSesion = (credenciales) => {
     const usuario = usersList.find(
       (element) => element.email === credenciales.email
     );
@@ -24,6 +24,7 @@ const UserContextProvider = ({ children }) => {
     if (usuario) {
       if (usuario.password === credenciales.password) {
         setUser(usuario);
+        console.log(usuario);
         setLoggedIn(true);
         navigate(-1);
       } else {
@@ -34,8 +35,19 @@ const UserContextProvider = ({ children }) => {
     }
   };
 
+  const validarPassword = (credenciales) => {
+    if (userExist(credenciales.email)) {
+      const usuario = usersList.find(
+        (element) => element.email === credenciales.email
+      );
+
+      return usuario.password === credenciales.password;
+    } else {
+      return false;
+    }
+  };
+
   const userExist = (email) => {
-    console.log(email);
     return usersList.some((element) => element.email === email);
   };
 
@@ -71,7 +83,8 @@ const UserContextProvider = ({ children }) => {
     user: user,
     usersList: usersList,
     loggedIn: loggedIn,
-    validarCredenciales,
+    iniciarSesion,
+    validarPassword,
     registrarNuevoUsuario,
     finalizarRegistro,
     userExist,

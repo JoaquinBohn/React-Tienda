@@ -10,6 +10,10 @@ import { ThemeProvider } from "@mui/material/styles";
 import theme from "./themeConfig";
 import LogIn from "./components/LogIn/LogIn";
 import SignUp from "./components/SignUp/SignUp.jsx";
+import Account from "./components/Account/Account";
+import ChangePassword from "./components/ChangePassword/ChangePassword";
+import ChangeName from "./components/ChangeName/ChangeName";
+import ChangeEmail from "./components/ChangeEmail/ChangeEmail";
 
 function App() {
   return (
@@ -21,6 +25,14 @@ function App() {
 
             <Routes>
               <Route path="/" element={<Home />} />
+
+              <Route path="/account" element={<Account />} />
+
+              <Route path="changeName" element={<ChangeName />} />
+
+              <Route path="changeEmail" element={<ChangeEmail />} />
+
+              <Route path="changePassword" element={<ChangePassword />} />
 
               <Route
                 path="/category/:categoryName"

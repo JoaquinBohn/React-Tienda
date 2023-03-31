@@ -23,7 +23,6 @@ const ItemListContainer = () => {
         ? query(itemCollection, where("categoria", "==", categoryName))
         : query(itemCollection, where("id-autor", "==", categoryName));
 
-      console.log(q);
       getDocs(q)
         .then((res) => {
           const productos = res.docs.map((producto) => {

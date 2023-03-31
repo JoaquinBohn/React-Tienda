@@ -2,7 +2,7 @@
   background-image: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0.5),
-      hsla(271, 76%, 53%, 0.502)
+      #8a2ce280
     ),
     url("https://res.cloudinary.com/drdgu83bp/image/upload/v1678727441/Assets/fondo2_b3k9lx.jpg");
   background-size: cover;

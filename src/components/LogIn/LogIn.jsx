@@ -5,7 +5,7 @@ import { getDocs, collection } from "firebase/firestore";
 import "./Login.css";
 
 const LogIn = () => {
-  const { validarCredenciales, cargarUsuarios } = useContext(UserContext);
+  const { iniciarSesion, cargarUsuarios } = useContext(UserContext);
 
   const [userInfo, setUserInfo] = useState({ email: "", password: "" });
 
@@ -16,6 +16,7 @@ const LogIn = () => {
         const usuarios = res.docs.map((user) => {
           return {
             ...user.data(),
+            id: user.id,
           };
         });
         cargarUsuarios(usuarios);
@@ -27,7 +28,7 @@ const LogIn = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    validarCredenciales(userInfo);
+    iniciarSesion(userInfo);
   };
 
   return (

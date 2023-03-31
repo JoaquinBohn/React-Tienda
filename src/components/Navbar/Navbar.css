@@ -17,8 +17,9 @@
 .opcion {
   width: 100px;
   height: 30px;
-  background-color: white;
-  border: 1px solid blueviolet;
+  background-color: rgba(255, 255, 255, 0.87);
+  box-shadow: 2px 2px 2px 1px #0000004b;
+  border: 1px solid grey;
 }
 
 .navbar-texto {

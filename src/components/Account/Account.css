@@ -1,0 +1,36 @@
+.account {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.account-container {
+  background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0.5),
+      hsla(271, 76%, 53%, 0.502)
+    ),
+    url("https://res.cloudinary.com/drdgu83bp/image/upload/v1678727441/Assets/fondo2_b3k9lx.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+
+.account-opciones {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 300px;
+  background-color: rgba(245, 245, 245, 0.856);
+  box-shadow: 3px 3px 3px 1px #0000004b;
+  border-radius: 5px;
+}
+
+.account-botones {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 150px;
+}

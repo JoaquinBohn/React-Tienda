@@ -59,6 +59,8 @@ const Home = () => {
                   xs={8}
                   sx={{
                     height: "800px",
+                    boxShadow: "3px 3px 3px 1px #0000004b",
+                    backgroundColor: "#b88ce065",
                   }}
                 >
                   <h2 className="mas-vendidos">Más vendidos</h2>
