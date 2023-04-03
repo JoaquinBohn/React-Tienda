@@ -14,6 +14,7 @@ import Account from "./components/Account/Account";
 import ChangePassword from "./components/ChangePassword/ChangePassword";
 import ChangeName from "./components/ChangeName/ChangeName";
 import ChangeEmail from "./components/ChangeEmail/ChangeEmail";
+import Contact from "./components/Contact/Contact";
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
               <Route path="changeEmail" element={<ChangeEmail />} />
 
               <Route path="changePassword" element={<ChangePassword />} />
+
+              <Route path="/contact" element={<Contact />} />
 
               <Route
                 path="/category/:categoryName"

@@ -31,7 +31,7 @@ const Navbar = () => {
         </div>
 
         <div className="opcion">
-          <Link to="/category/cuentos" style={{ textDecoration: "none" }}>
+          <Link to="/contact" style={{ textDecoration: "none" }}>
             <h3 className="navbar-texto">Contacto</h3>
           </Link>
         </div>
