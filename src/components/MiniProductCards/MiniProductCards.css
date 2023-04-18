@@ -1,0 +1,19 @@
+.mini-card {
+  height: 280px;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.card-box {
+  width: 150px;
+}
+
+@media (max-width: 480px) {
+  .mini-card {
+    height: 230px;
+  }
+
+  .card-box {
+    width: 120px;
+  }
+}

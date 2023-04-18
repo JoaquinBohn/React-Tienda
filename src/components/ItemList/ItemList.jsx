@@ -10,7 +10,7 @@ const ItemList = ({ items }) => {
       justifyContent="center"
       alignItems="center"
       spacing={2}
-      sx={{ marginTop: "20px", marginBottom: "20px" }}
+      className="grid-contenedor"
     >
       {items.map((element) => {
         return <ProductCard element={element} key={element.id} />;

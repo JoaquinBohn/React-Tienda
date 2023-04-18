@@ -1,6 +1,7 @@
 import { Grid, Paper, styled, Button } from "@mui/material";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import "./MiniProductCards.css";
 
 const MiniProductCards = ({ element }) => {
   const Item = styled(Paper)(({ theme }) => ({
@@ -17,20 +18,17 @@ const MiniProductCards = ({ element }) => {
   };
 
   return (
-    <Grid item xs={4}>
+    <Grid item xs={6} sm={4}>
       <Item
-        sx={{
-          border: "1px solid blueviolet",
-          width: "150px",
-          backgroundColor: "rgb(221, 221, 221)",
-        }}
+        className="card-box"
+        sx={{ boxShadow: "2px 2px 2px 1px #00000060" }}
       >
         <Grid
           container
           direction="column"
           justifyContent="flex-start"
           spacing={2}
-          sx={{ height: "280px", width: "100%", marginBottom: "2px" }}
+          className="mini-card"
         >
           <Grid item xs={10}>
             <img className="img-producto" src={element.img} alt="" />

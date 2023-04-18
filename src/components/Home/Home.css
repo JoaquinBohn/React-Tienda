@@ -26,6 +26,48 @@
   align-items: center;
 }
 
+.home-carousel {
+  width: 1000px;
+  height: 250px;
+}
+
+.grid-vendidos {
+  height: 800px;
+  box-shadow: 3px 3px 3px 1px #0000004b;
+  background-color: #b88ce065;
+}
+
 .mas-vendidos {
   font-size: 35px;
+}
+
+.home-content {
+  width: 1000px;
+}
+
+@media (max-width: 480px) {
+  .navbar-opciones {
+    padding-right: 0px;
+  }
+
+  .home-content {
+    width: 480px;
+  }
+
+  .paper-body {
+    width: 480px;
+  }
+
+  .home-body {
+    width: 480px;
+  }
+
+  .home-carousel {
+    width: 480px;
+    align-items: center;
+  }
+
+  .grid-vendidos {
+    height: 900px;
+  }
 }

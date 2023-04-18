@@ -7,8 +7,23 @@
   padding-left: 10px;
 }
 
+.acordeon {
+  width: 200px;
+}
+
+.tipografia {
+  font-family: Roboto Condensed, sans-serif;
+  font-size: 20px;
+}
+
 .categorias {
+  font-family: Roboto Condensed, sans-serif;
+  font-size: 18px;
+}
+
+.lista-categorias {
   list-style: none;
+  padding: 0;
 }
 
 .titulo-catalogo {
@@ -18,4 +33,29 @@
 
 li {
   padding-bottom: 5px;
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 100px;
+    margin-right: 0;
+    padding-top: 10px;
+    padding-left: 5px;
+  }
+
+  .titulo-catalogo {
+    font-size: 20px;
+  }
+
+  .acordeon {
+    width: 100px;
+  }
+
+  .tipografia {
+    font-size: 12px;
+  }
+
+  .categorias {
+    font-size: 12px;
+  }
 }

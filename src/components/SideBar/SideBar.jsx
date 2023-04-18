@@ -11,29 +11,17 @@ const SideBar = () => {
   return (
     <div className="sidebar">
       <h2 className="titulo-catalogo">Catálogo</h2>
-      <Accordion style={{ width: "200px" }}>
+      <Accordion className="acordeon">
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography
-            style={{
-              fontFamily: "Roboto Condensed , sans-serif",
-              fontSize: "20px",
-            }}
-          >
-            Categorías
-          </Typography>
+          <Typography className="tipografia">Categorías</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography
-            style={{
-              fontFamily: "Roboto Condensed , sans-serif",
-              fontSize: "18px",
-            }}
-          >
-            <ul className="categorias">
+          <Typography className="categorias">
+            <ul className="lista-categorias">
               <Link to="/category/todos" style={{ textDecoration: "none" }}>
                 <li>Todos</li>
               </Link>
@@ -63,29 +51,17 @@ const SideBar = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion style={{ width: "200px" }}>
+      <Accordion className="acordeon">
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography
-            style={{
-              fontFamily: "Roboto Condensed , sans-serif",
-              fontSize: "20px",
-            }}
-          >
-            Autores
-          </Typography>
+          <Typography className="tipografia">Autores</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography
-            style={{
-              fontFamily: "Roboto Condensed , sans-serif",
-              fontSize: "18px",
-            }}
-          >
-            <ul className="categorias">
+          <Typography className="categorias">
+            <ul className="lista-categorias">
               <Link to="/category/todos" style={{ textDecoration: "none" }}>
                 <li>Todos</li>
               </Link>

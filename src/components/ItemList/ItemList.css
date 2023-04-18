@@ -4,3 +4,8 @@
   flex-wrap: wrap;
   justify-content: flex-start;
 }
+
+.grid-contenedor {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

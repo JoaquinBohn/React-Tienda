@@ -29,3 +29,14 @@
   display: flex;
   justify-content: space-around;
 }
+
+@media (max-width: 480px) {
+  .the {
+    height: 40px;
+    font-size: 40px;
+  }
+
+  .subtitulo {
+    font-size: 20px;
+  }
+}

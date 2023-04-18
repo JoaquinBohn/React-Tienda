@@ -5,10 +5,11 @@ import "./ProductCard.css";
 
 const ProductCard = ({ element }) => {
   const Item = styled(Paper)(({ theme }) => ({
-    backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
+    backgroundColor: "#ffffffab",
     padding: theme.spacing(1),
     textAlign: "flex-start",
     color: theme.palette.text.secondary,
+    boxShadow: "3px 3px 3px 1px #00000069",
   }));
 
   const navigate = useNavigate();
@@ -18,25 +19,20 @@ const ProductCard = ({ element }) => {
   };
 
   return (
-    <Grid item xs={3}>
-      <Item
-        sx={{
-          border: "1px solid blueviolet",
-          width: "170px",
-          backgroundColor: "rgb(221, 221, 221)",
-        }}
-      >
+    <Grid item xs={5} sm={3}>
+      <Item className="grid-item">
         <Grid
           container
           direction="column"
           justifyContent="flex-start"
+          alignItems="center"
           spacing={2}
           sx={{ height: "370px", width: "100%", marginBottom: "2px" }}
         >
-          <Grid item xs={7}>
+          <Grid item xs={6} sm={7}>
             <img className="img-producto" src={element.img} alt="" />
           </Grid>
-          <Grid item xs={5}>
+          <Grid item xs={6} sm={5}>
             <h2 className="libro-titulo">Título: {element.nombre}</h2>
             <h3 className="libro-detalles">Autor: {element.autor}</h3>
             <p className="libro-detalles">Precio: ${element.precio}</p>

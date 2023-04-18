@@ -27,3 +27,9 @@
   padding-left: 5px;
   box-shadow: 3px 3px 3px 1px #0000004b;
 }
+
+@media (max-width: 480px) {
+  .img-container {
+    display: none;
+  }
+}
