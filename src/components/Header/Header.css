@@ -31,6 +31,10 @@
 }
 
 @media (max-width: 480px) {
+  .cabecera {
+    height: 12vh;
+  }
+
   .the {
     height: 40px;
     font-size: 40px;

@@ -18,22 +18,24 @@ const MiniProductCards = ({ element }) => {
   };
 
   return (
-    <Grid item xs={6} sm={4}>
+    <Grid item xs={12} sm={6}>
       <Item
         className="card-box"
         sx={{ boxShadow: "2px 2px 2px 1px #00000060" }}
       >
         <Grid
           container
-          direction="column"
+          direction="row"
           justifyContent="flex-start"
           spacing={2}
           className="mini-card"
         >
-          <Grid item xs={10}>
+          <Grid item xs={6}>
             <img className="img-producto" src={element.img} alt="" />
           </Grid>
-          <Grid item xs={2}>
+          <Grid item xs={6}>
+            <h3>{element.nombre}</h3>
+            <hr />
             <Button
               sx={{ width: "70px", height: "20px", fontSize: "10px" }}
               variant="contained"

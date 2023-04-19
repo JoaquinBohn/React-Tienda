@@ -43,6 +43,12 @@
 
 .home-content {
   width: 1000px;
+  margin-top: 40px;
+}
+
+.home-grid-container {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 480px) {
@@ -55,7 +61,7 @@
   }
 
   .paper-body {
-    width: 480px;
+    width: 460px;
   }
 
   .home-body {
@@ -69,5 +75,10 @@
 
   .grid-vendidos {
     height: 900px;
+    width: 200px;
+  }
+
+  .home-grid-container {
+    width: 460px;
   }
 }

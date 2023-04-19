@@ -22,6 +22,7 @@ const Carousel = () => {
     "Descubra todos los libros académicos de nuestro catálogo",
     "Grandes libros para pequeños lectores, visite nuestra sección de infantiles.",
   ];
+
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [selectedId, setSelectedId] = useState(idList[0]);
   const [selectedTittle, setSelectedTittle] = useState(tittleList[0]);
@@ -33,12 +34,18 @@ const Carousel = () => {
     "inactivo",
   ]);
 
+  const [loading, setLoading] = useState(false);
+
   const setChange = (index) => {
     setSelectedId(idList[index]);
     setSelectedLink(linkList[index]);
     setSelectedTittle(tittleList[index]);
     setSelectedText(textList[index]);
     setSelectedIndex(index);
+    setTimeout(() => {
+      setLoading(false);
+    }, 0.5);
+    setLoading(true);
   };
 
   const previous = () => {
@@ -54,6 +61,13 @@ const Carousel = () => {
   };
 
   useEffect(() => {
+    const interval = setInterval(() => {
+      next();
+    }, 4500);
+    return () => clearInterval(interval);
+  });
+
+  useEffect(() => {
     if (selectedIndex === 1) {
       setButtonState(["inactivo", "activo", "inactivo"]);
     } else if (selectedIndex === 2) {
@@ -61,12 +75,20 @@ const Carousel = () => {
     } else {
       setButtonState(["activo", "inactivo", "inactivo"]);
     }
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 0.5);
+    setLoading(true);
   }, [selectedIndex]);
 
   return (
     <>
       <div className="content-carousel">
-        <div className="tarjeta-carousel" id={selectedId}>
+        <div
+          className={loading ? "tarjeta-carousel" : "tarjeta-carousel-animada"}
+          id={selectedId}
+        >
           <Link to={selectedLink}>
             <h2 className="carousel-tittle">{selectedTittle}</h2>
             <p className="carousel-text">{selectedText}</p>

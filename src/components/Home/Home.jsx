@@ -20,14 +20,7 @@ const Home = () => {
           <div className="home-body">
             <Carousel />
             <div className="home-content">
-              <Grid
-                container
-                spacing={2}
-                sx={{
-                  marginTop: "20px",
-                  marginBottom: "20px",
-                }}
-              >
+              <Grid container className="home-grid-container" spacing={2}>
                 <Grid item xs={8} className="grid-vendidos">
                   <h2 className="mas-vendidos">Más vendidos</h2>
                   <Novedades />
