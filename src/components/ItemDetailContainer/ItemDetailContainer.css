@@ -13,3 +13,19 @@
   background-size: cover;
   background-position: center center;
 }
+
+.boton-volver {
+  width: 150px;
+  height: 50px;
+}
+
+@media (max-width: 480px) {
+  .item-detail {
+    height: 700px;
+    padding: 10px;
+  }
+
+  .boton-volver {
+    width: 100px;
+  }
+}

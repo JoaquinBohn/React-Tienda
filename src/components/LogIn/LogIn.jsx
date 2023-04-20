@@ -34,10 +34,11 @@ const LogIn = () => {
   return (
     <div className="login-container">
       <div className="login">
-        <h2>Ingresar a mi cuenta</h2>
+        <h2 className="login-tittle">Ingresar a mi cuenta</h2>
         <form className="login-form">
           <label>Email</label>
           <input
+            className="login-input"
             type="text"
             placeholder="email"
             onChange={(e) =>
@@ -46,13 +47,16 @@ const LogIn = () => {
           />
           <label>Contraseña</label>
           <input
+            className="login-input"
             type="password"
             placeholder="contraseña"
             onChange={(e) =>
               setUserInfo({ ...userInfo, password: e.target.value })
             }
           />
-          <button onClick={handleSubmit}>Ingresar</button>
+          <button className="login-button" onClick={handleSubmit}>
+            Ingresar
+          </button>
         </form>
       </div>
     </div>

@@ -15,17 +15,24 @@ const Home = () => {
         <Paper
           elevation="12"
           className="paper-body"
-          sx={{ bgcolor: "#f5f5f5c5" }}
+          sx={{ bgcolor: "#f5f5f5c5", justifyContent: "flex-start" }}
         >
-          <div className="home-body">
+          <div className="home-body-container">
             <Carousel />
             <div className="home-content">
-              <Grid container className="home-grid-container" spacing={2}>
+              <Grid
+                container
+                justifyContent="center"
+                xs={11}
+                lg={12}
+                className="home-grid-container"
+                spacing={2}
+              >
                 <Grid item xs={8} className="grid-vendidos">
                   <h2 className="mas-vendidos">Más vendidos</h2>
                   <Novedades />
                 </Grid>
-                <Grid item xs={1}></Grid>
+                <Grid item xs={0} lg={1}></Grid>
                 <Grid item xs={3}>
                   <Article />
                 </Grid>

@@ -35,7 +35,7 @@ const ItemDetailContainer = () => {
   return (
     <div className="item-detail">
       <Button
-        sx={{ width: "150px", height: "50px" }}
+        className="boton-volver"
         variant="contained"
         color="neutral"
         size="small"

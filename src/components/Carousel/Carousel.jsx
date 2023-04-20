@@ -83,7 +83,7 @@ const Carousel = () => {
   }, [selectedIndex]);
 
   return (
-    <>
+    <div className="carousel">
       <div className="content-carousel">
         <div
           className={loading ? "tarjeta-carousel" : "tarjeta-carousel-animada"}
@@ -141,7 +141,7 @@ const Carousel = () => {
           />
         </button>
       </div>
-    </>
+    </div>
   );
 };
 

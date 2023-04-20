@@ -31,3 +31,31 @@
   background-size: cover;
   background-position: center center;
 }
+
+@media (max-width: 480px) {
+  .login-form {
+    width: 300px;
+    height: 250px;
+    font-size: 20px;
+  }
+
+  .login {
+    width: 350px;
+    height: 370px;
+    font-size: 20px;
+    justify-content: flex-start;
+  }
+
+  .login-input {
+    height: 30px;
+  }
+
+  .login-button {
+    height: 30px;
+    font-size: 20px;
+  }
+
+  .login-tittle {
+    margin: 15px;
+  }
+}

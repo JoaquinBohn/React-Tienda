@@ -32,4 +32,8 @@
   .img-container {
     display: none;
   }
+
+  .articulo {
+    width: 110px;
+  }
 }
