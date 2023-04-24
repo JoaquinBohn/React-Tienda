@@ -1,3 +1,9 @@
+.grid-product-container {
+  height: 370px;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
 .img-producto {
   height: 190px;
   width: 145px;
@@ -7,13 +13,6 @@
   width: 200px;
 }
 
-.producto {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  font-size: 10px;
-}
-
 .boton-detalles {
   position: relative;
   top: 10px;
@@ -21,6 +20,7 @@
 
 .libro-titulo {
   font-size: 15px;
+  width: 100px;
 }
 
 .libro-detalles {
@@ -34,6 +34,11 @@
   }
 
   .grid-item {
-    width: 140px;
+    width: 250px;
+    margin-left: 20px;
+  }
+
+  .grid-product-container {
+    height: 200px;
   }
 }

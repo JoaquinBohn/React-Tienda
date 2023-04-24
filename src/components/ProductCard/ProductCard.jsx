@@ -1,5 +1,5 @@
 import { Grid, Paper, styled, Button } from "@mui/material";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ProductCard.css";
 
@@ -18,24 +18,30 @@ const ProductCard = ({ element }) => {
     navigate(`/item/${id}`);
   };
 
+  const [screenWidth, setScreenWidth] = useState(0);
+
+  useEffect(() => {
+    setScreenWidth(window.innerWidth);
+  }, []);
+
   return (
-    <Grid item xs={5} sm={3}>
+    <Grid item xs={12} sm={3}>
       <Item className="grid-item">
         <Grid
           container
-          direction="column"
+          direction={screenWidth > 480 ? "column" : "row"}
           justifyContent="flex-start"
           alignItems="center"
           spacing={2}
-          sx={{ height: "370px", width: "100%", marginBottom: "2px" }}
+          className="grid-product-container"
         >
           <Grid item xs={6} sm={7}>
             <img className="img-producto" src={element.img} alt="" />
           </Grid>
           <Grid item xs={6} sm={5}>
-            <h2 className="libro-titulo">Título: {element.nombre}</h2>
-            <h3 className="libro-detalles">Autor: {element.autor}</h3>
-            <p className="libro-detalles">Precio: ${element.precio}</p>
+            <h2 className="libro-titulo">{element.nombre}</h2>
+            <h3 className="libro-detalles">{element.autor}</h3>
+            <p className="libro-detalles">${element.precio}</p>
             <Button
               sx={{ width: "70px", height: "20px", fontSize: "10px" }}
               variant="contained"
