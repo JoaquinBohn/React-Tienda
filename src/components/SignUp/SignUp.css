@@ -31,3 +31,25 @@
   background-size: cover;
   background-position: center center;
 }
+
+@media (max-width: 480px) {
+  .registro {
+    width: 350px;
+    height: 400px;
+    margin-top: 50px;
+  }
+
+  .formulario {
+    width: 250px;
+    height: 300px;
+    font-size: 22px;
+  }
+
+  .boton-registro {
+    font-size: 15px;
+  }
+
+  .form-input {
+    font-size: 20px;
+  }
+}

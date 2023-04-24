@@ -34,11 +34,19 @@
   }
 
   .grid-item {
-    width: 250px;
+    width: 270px;
     margin-left: 20px;
   }
 
   .grid-product-container {
-    height: 200px;
+    height: 220px;
+  }
+
+  .libro-titulo {
+    font-size: 20px;
+  }
+
+  .libro-detalles {
+    font-size: 17px;
   }
 }

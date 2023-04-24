@@ -2,12 +2,16 @@ import React, { useContext, useState, useEffect } from "react";
 import { UserContext } from "../../context/UserContext";
 import { db } from "../../firebaseConfig";
 import { getDocs, collection } from "firebase/firestore";
+import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const LogIn = () => {
   const { iniciarSesion, cargarUsuarios } = useContext(UserContext);
 
   const [userInfo, setUserInfo] = useState({ email: "", password: "" });
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const usersCollection = collection(db, "users");
@@ -29,6 +33,10 @@ const LogIn = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     iniciarSesion(userInfo);
+  };
+
+  const cancelar = () => {
+    navigate(-1);
   };
 
   return (
@@ -58,6 +66,14 @@ const LogIn = () => {
             Ingresar
           </button>
         </form>
+        <Button
+          variant="contained"
+          color="warning"
+          size="small"
+          onClick={cancelar}
+        >
+          Cancelar
+        </Button>
       </div>
     </div>
   );

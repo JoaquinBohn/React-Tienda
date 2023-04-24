@@ -28,7 +28,7 @@ const SignUp = () => {
   };
 
   const cancelar = () => {
-    navigate("/");
+    navigate(-1);
   };
 
   return (
@@ -37,6 +37,7 @@ const SignUp = () => {
         <form className="formulario" onSubmit={handleSubmit}>
           <label>Nombre</label>
           <input
+            className="form-input"
             type="text"
             name="nombre"
             placeholder="Ingrese su nombre"
@@ -46,6 +47,7 @@ const SignUp = () => {
           />
           <label>Email</label>
           <input
+            className="form-input"
             type="text"
             name="email"
             placeholder="Ingrese su email"
@@ -55,6 +57,7 @@ const SignUp = () => {
           />
           <label>Constraseña</label>
           <input
+            className="form-input"
             type="text"
             name="constraseña"
             placeholder="Ingrese su contraseña"
@@ -62,7 +65,7 @@ const SignUp = () => {
               setUsuarioNuevo({ ...usuarioNuevo, password: e.target.value })
             }
           />
-          <button>Completar registro</button>
+          <button className="boton-registro">Completar registro</button>
         </form>
         <Button
           variant="contained"
