@@ -9,3 +9,9 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+  .grid-contenedor {
+    width: 500px;
+  }
+}

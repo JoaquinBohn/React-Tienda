@@ -30,11 +30,11 @@ const MiniProductCards = ({ element }) => {
           spacing={2}
           className="mini-card"
         >
-          <Grid item xs={6}>
-            <img className="img-producto" src={element.img} alt="" />
+          <Grid item xs={6} sm={7} lg={6}>
+            <img className="mini-img-product" src={element.img} alt="" />
           </Grid>
-          <Grid item xs={6}>
-            <h3>{element.nombre}</h3>
+          <Grid item xs={6} sm={5} lg={6}>
+            <h3 className="mini-titulo">{element.nombre}</h3>
             <hr />
             <Button
               sx={{ width: "70px", height: "20px", fontSize: "10px" }}

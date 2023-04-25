@@ -37,3 +37,15 @@
     width: 110px;
   }
 }
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+  .articulo {
+    width: 200px;
+  }
+
+  .img-container {
+    width: 180px;
+    height: 170px;
+    margin-bottom: 20px;
+  }
+}

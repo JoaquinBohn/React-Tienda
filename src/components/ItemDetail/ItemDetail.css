@@ -4,7 +4,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   background-color: rgb(221, 221, 221);
-  border: 1px solid blueviolet;
+  box-shadow: 3px 3px 3px 1px #0000004b;
 }
 
 .imagen {
@@ -27,7 +27,8 @@
 
 @media (max-width: 480px) {
   .detalle {
-    width: 280px;
+    width: 300px;
+    height: 750px;
     flex-direction: column;
   }
 
@@ -39,5 +40,22 @@
 
   .info {
     width: 250px;
+  }
+}
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+  .detalle {
+    width: 580px;
+    height: 550px;
+  }
+
+  .imagen {
+    width: 200px;
+    height: 270px;
+    margin-left: 20px;
+  }
+
+  .info {
+    width: 300px;
   }
 }

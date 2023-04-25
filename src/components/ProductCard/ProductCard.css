@@ -34,7 +34,7 @@
   }
 
   .grid-item {
-    width: 270px;
+    width: 300px;
     margin-left: 20px;
   }
 
@@ -44,6 +44,34 @@
 
   .libro-titulo {
     font-size: 20px;
+  }
+
+  .libro-detalles {
+    font-size: 17px;
+  }
+}
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+  .img-producto {
+    width: 200px;
+    height: 260px;
+  }
+
+  .grid-item {
+    width: 220px;
+    height: 500px;
+    margin-left: 10px;
+  }
+
+  .grid-product-container {
+    width: 220px;
+    height: 500px;
+    margin: 0;
+  }
+
+  .libro-titulo {
+    font-size: 20px;
+    width: 200px;
   }
 
   .libro-detalles {

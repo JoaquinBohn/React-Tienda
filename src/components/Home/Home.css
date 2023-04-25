@@ -98,3 +98,31 @@
     padding-left: 10px;
   }
 }
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+  .paper-body {
+    width: 748px;
+    height: 1000px;
+  }
+
+  .home-body {
+    height: 1100px;
+  }
+
+  .home-body-container {
+    width: 748px;
+  }
+
+  .home-grid-container {
+    width: 748px;
+  }
+
+  .home-content {
+    width: 768px;
+  }
+
+  .grid-vendidos {
+    width: 350px;
+    height: 700px;
+  }
+}

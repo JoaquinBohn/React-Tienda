@@ -69,7 +69,7 @@ const Cart = () => {
                   <div className="tarjeta-producto" key={item.id}>
                     <img className="imagen-producto" src={item.img} alt="" />
                     <div className="detalle-producto">
-                      <h2>Titulo: {item.nombre}</h2>
+                      <h2 className="product-title">Titulo: {item.nombre}</h2>
                       <h3>Precio: ${item.precio}</h3>
                       <h3>Cantidad: {item.quantity}</h3>
                       <Button
@@ -90,7 +90,7 @@ const Cart = () => {
             <div>
               <h2>Carrito vacío</h2>
               <p>Aún no se han agregado productos al carrito.</p>
-              <Link to="/">Ir al catálogo</Link>
+              <Link to="/category/todos">Ir al catálogo</Link>
             </div>
           ) : (
             <div className="descripcion-carrito">

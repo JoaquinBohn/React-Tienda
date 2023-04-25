@@ -25,7 +25,7 @@ const ProductCard = ({ element }) => {
   }, []);
 
   return (
-    <Grid item xs={12} sm={3}>
+    <Grid item xs={12} lg={3} sm={6}>
       <Item className="grid-item">
         <Grid
           container
@@ -35,10 +35,10 @@ const ProductCard = ({ element }) => {
           spacing={2}
           className="grid-product-container"
         >
-          <Grid item xs={6} sm={7}>
+          <Grid item xs={6} lg={7} sm={7}>
             <img className="img-producto" src={element.img} alt="" />
           </Grid>
-          <Grid item xs={6} sm={5}>
+          <Grid item xs={6} lg={5} sm={5}>
             <h2 className="libro-titulo">{element.nombre}</h2>
             <h3 className="libro-detalles">{element.autor}</h3>
             <p className="libro-detalles">${element.precio}</p>

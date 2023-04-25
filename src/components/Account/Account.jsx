@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { UserContext } from "../../context/UserContext";
 import { useNavigate } from "react-router-dom";
 import LogIn from "../LogIn/LogIn";
@@ -8,6 +8,22 @@ import Navbar from "../Navbar/Navbar";
 
 const Account = () => {
   const { user, loggedIn } = useContext(UserContext);
+
+  const [censoredPassword, setCensoredPassword] = useState(
+    "x".repeat(user.password.length)
+  );
+
+  const [activeButton, setActiveButton] = useState(true);
+
+  const mostrar = () => {
+    setCensoredPassword(user.password);
+    setActiveButton(false);
+  };
+
+  const ocultar = () => {
+    setCensoredPassword("x".repeat(user.password.length));
+    setActiveButton(true);
+  };
 
   const navigate = useNavigate();
 
@@ -36,7 +52,19 @@ const Account = () => {
             <h2>Mis datos:</h2>
             <p>Nombre: {user.nombre}</p>
             <p>Email: {user.email}</p>
-            <p>Contraseña: {user.password}</p>
+            <p>Contraseña: {censoredPassword}</p>
+            <button
+              className={activeButton ? "active-button" : "inactive-button"}
+              onClick={mostrar}
+            >
+              Mostrar contraseña
+            </button>
+            <button
+              className={!activeButton ? "active-button" : "inactive-button"}
+              onClick={ocultar}
+            >
+              Ocultar contraseña
+            </button>
           </div>
 
           <hr

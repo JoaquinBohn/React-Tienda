@@ -21,11 +21,22 @@
 
 @media (max-width: 480px) {
   .item-detail {
-    height: 700px;
+    height: 800px;
     padding: 10px;
   }
 
   .boton-volver {
     width: 100px;
+  }
+}
+
+@media ((min-width: 481px) and (max-width: 768px)) {
+  .item-detail {
+    padding: 20px;
+    height: 700px;
+  }
+
+  .boton-volver {
+    width: 120px;
   }
 }
