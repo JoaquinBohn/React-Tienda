@@ -25,6 +25,11 @@
   padding-bottom: 20px;
 }
 
+.agotado {
+  font-size: 25px;
+  color: rgb(150, 0, 0);
+}
+
 @media (max-width: 480px) {
   .detalle {
     width: 300px;

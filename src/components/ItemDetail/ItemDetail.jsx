@@ -39,7 +39,11 @@ const ItemDetail = ({ producto }) => {
         <p>{producto.descripcion}</p>
         <h2 className="stock">Stock disponible: {producto.stock}</h2>
         <h2>Precio: ${producto.precio}</h2>
-        <ItemCount stock={producto.stock} initial={quantity} onAdd={onAdd} />
+        {producto.stock > 0 ? (
+          <ItemCount stock={producto.stock} initial={quantity} onAdd={onAdd} />
+        ) : (
+          <h3 className="agotado">Producto agotado</h3>
+        )}
       </div>
     </div>
   );
