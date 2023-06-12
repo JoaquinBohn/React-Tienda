@@ -14,12 +14,13 @@ Forma parte de mi entrega final para un curso de CoderHouse y por lo tanto gran 
 # Configurar variables de entorno
 
 Para poder levantar el proyecto, debes configurar en un archivo .env las siguientes variables:
--REACT_APP_API_KEY
--REACT_APP_AUTH_DOMAIN
--REACT_APP_PROJECT_ID
--REACT_APP_STORAGE_BUCKET
--REACT_APP_MESSAGING_SENDER_ID
--REACT_APP_APP_ID
+
+- REACT_APP_API_KEY
+- REACT_APP_AUTH_DOMAIN
+- REACT_APP_PROJECT_ID
+- REACT_APP_STORAGE_BUCKET
+- REACT_APP_MESSAGING_SENDER_ID
+- REACT_APP_APP_ID
 
 Los valores de estas variables se deben obtener de tu base de datos.
 
