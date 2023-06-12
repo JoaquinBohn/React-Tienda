@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBRChhBoHpacXmqGFgCu8bi9-2NkL096fM",
-  authDomain: "tienda-libros-26ca4.firebaseapp.com",
-  projectId: "tienda-libros-26ca4",
-  storageBucket: "tienda-libros-26ca4.appspot.com",
-  messagingSenderId: "753460077775",
-  appId: "1:753460077775:web:8d0f46219789c5f6bd03ba",
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
 };
 
 // Initialize Firebase
