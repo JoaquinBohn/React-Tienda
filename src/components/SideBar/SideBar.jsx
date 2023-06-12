@@ -3,7 +3,6 @@ import "./SideBar.css";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
-import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Link } from "react-router-dom";
 
@@ -17,10 +16,10 @@ const SideBar = () => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography className="tipografia">Categorías</Typography>
+          <h3 className="tipografia">Categorías</h3>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography className="categorias">
+          <h4 className="categorias">
             <ul className="lista-categorias">
               <Link to="/category/todos" style={{ textDecoration: "none" }}>
                 <li>Todos</li>
@@ -48,7 +47,7 @@ const SideBar = () => {
                 <li>Infantiles</li>
               </Link>
             </ul>
-          </Typography>
+          </h4>
         </AccordionDetails>
       </Accordion>
       <Accordion className="acordeon">
@@ -57,10 +56,10 @@ const SideBar = () => {
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className="tipografia">Autores</Typography>
+          <h3 className="tipografia">Autores</h3>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography className="categorias">
+          <h4 className="categorias">
             <ul className="lista-categorias">
               <Link to="/category/todos" style={{ textDecoration: "none" }}>
                 <li>Todos</li>
@@ -126,7 +125,7 @@ const SideBar = () => {
                 <li>María García</li>
               </Link>
             </ul>
-          </Typography>
+          </h4>
         </AccordionDetails>
       </Accordion>
     </div>
