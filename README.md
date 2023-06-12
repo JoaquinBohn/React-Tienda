@@ -13,6 +13,52 @@ Forma parte de mi entrega final para un curso de CoderHouse y por lo tanto gran 
 
 # Configurar variables de entorno
 
+Para poder levantar el proyecto, debes configurar en un archivo .env las siguientes variables:
+-REACT_APP_API_KEY
+-REACT_APP_AUTH_DOMAIN
+-REACT_APP_PROJECT_ID
+-REACT_APP_STORAGE_BUCKET
+-REACT_APP_MESSAGING_SENDER_ID
+-REACT_APP_APP_ID
+
+Los valores de estas variables se deben obtener de tu base de datos.
+
+# Configuracion de la base de datos firebase
+
+Para la correcta integración de los datos obtenidos de tu base de datos de firestore, debes ordenar y nombrar tus colecciones de la siguiente manera:
+
+### Colección productos
+
+Formato de los documentos:
+
+- Campo: autor, Tipo: string
+- Campo: categoria, Tipo: string
+- Campo: descripcion, Tipo: string
+- Campo: id-autor, Tipo: string
+- Campo: img, Tipo: string
+- Campo: nombre, Tipo: string
+- Campo: precio, Tipo: int
+- Campo: stock, Tipo: int
+- Campo: vendidos, Tipo: int
+
+### Colección orders
+
+Formato de los documentos:
+
+- Campo: buyer, Tipo: map -> contiene dos campos: (email y phone ambos de tipo string)
+- Campo: date, Tipo: timestamp
+- Campo: items, Tipo: array -> contiene docs de tipo map: (categoria, id, img y nombre de tipo string; precio, quantity y stock de tipo int)
+- Campo: total, Tipo: int
+
+### Colección users
+
+Formato de los documentos:
+
+- Campo: email, Tipo: string
+- Campo: nombre, Tipo: string
+- Campo: password, Tipo: string
+- Campo: rol, Tipo: string
+
 ## NPM
 
 ![](https://res.cloudinary.com/drdgu83bp/image/upload/v1678719003/Assets/npm_logo_k9cjrx.png)
