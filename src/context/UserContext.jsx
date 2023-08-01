@@ -79,6 +79,13 @@ const UserContextProvider = ({ children }) => {
     navigate("/");
   };
 
+  const darCredenciales = () => {
+    Swal.fire({
+      title: "Si no desea registrarse ingrese con los siguientes datos",
+      text: "Email: johndoe - Password: 1234",
+    });
+  };
+
   let data = {
     user: user,
     usersList: usersList,
@@ -90,6 +97,7 @@ const UserContextProvider = ({ children }) => {
     userExist,
     salir,
     cargarUsuarios,
+    darCredenciales,
   };
 
   return <UserContext.Provider value={data}>{children}</UserContext.Provider>;

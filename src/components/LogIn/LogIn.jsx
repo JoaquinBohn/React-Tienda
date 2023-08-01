@@ -7,7 +7,8 @@ import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const LogIn = () => {
-  const { iniciarSesion, cargarUsuarios } = useContext(UserContext);
+  const { iniciarSesion, cargarUsuarios, darCredenciales } =
+    useContext(UserContext);
 
   const [userInfo, setUserInfo] = useState({ email: "", password: "" });
 
@@ -38,6 +39,10 @@ const LogIn = () => {
   const cancelar = () => {
     navigate(-1);
   };
+
+  useEffect(() => {
+    darCredenciales();
+  }, []);
 
   return (
     <div className="login-container">
